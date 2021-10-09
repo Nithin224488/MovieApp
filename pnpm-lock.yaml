@@ -6,8 +6,10 @@ dependencies:
   js-cookie: 3.0.1
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
+  react-icons: 4.3.1_react@17.0.1
   react-router-dom: 5.3.0_react@17.0.1
   react-slick: 0.28.1_react-dom@17.0.1+react@17.0.1
+  slick-carousel: 1.8.1
   styled-components: 5.3.1_react-dom@17.0.1+react@17.0.1
   typeface-hk-grotesk: 1.0.0
 devDependencies:
@@ -10363,6 +10365,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-nQTTcUu+ATDbrSD1BZHr5kgSD4oF8OFjxun8uAaL8RwPBacGBNPf/yAuVVdx17N8XNzRDMrZ9XcKZHCjPW+9ew==
+  /react-icons/4.3.1_react@17.0.1:
+    dependencies:
+      react: 17.0.1
+    dev: false
+    peerDependencies:
+      react: '*'
+    resolution:
+      integrity: sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==
   /react-is/16.13.1:
     resolution:
       integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -11300,6 +11310,12 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-qMCMfhY040cVHT43K9BFygqYbUPFZKHOg7K73mtTWJRb8pyP3fzf4Ixd5SzdEJQ6MRUg/WBnOLxghZtKKurENQ==
+  /slick-carousel/1.8.1:
+    dev: false
+    peerDependencies:
+      jquery: '>=1.8.0'
+    resolution:
+      integrity: sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==
   /snapdragon-node/2.1.1:
     dependencies:
       define-property: 1.0.0
@@ -13059,8 +13075,10 @@ specifiers:
   prettier: 2.2.1
   react: 17.0.1
   react-dom: 17.0.1
+  react-icons: 4.3.1
   react-router-dom: 5.3.0
   react-scripts: 4.0.3
   react-slick: 0.28.1
+  slick-carousel: 1.8.1
   styled-components: 5.3.1
   typeface-hk-grotesk: 1.0.0
