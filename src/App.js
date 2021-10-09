@@ -1,7 +1,6 @@
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 import LoginForm from './components/LoginForm'
-
 import './App.css'
 
 const App = () => (
@@ -12,4 +11,4 @@ const App = () => (
   </BrowserRouter>
 )
 
-export default 
+export default App
