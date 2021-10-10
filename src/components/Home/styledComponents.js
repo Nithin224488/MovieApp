@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
   min-height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
 `
 export const Banner = styled.div`
   background-image: url(${props =>
@@ -90,6 +93,7 @@ export const PlayButton = styled.button`
     height: 40px;
     width: 74px;
     padding: 12px, 24px, 12px, 24px;
+    margin-top: 20px;
   }
 `
 export const FadeBottom = styled.div`
@@ -123,8 +127,9 @@ export const MovieContainer = styled.div`
 `
 export const MovieListContainer = styled.div`
   width: 100%;
+  z-index: 100;
   @media screen and (max-width: 360px) {
-    width: 320px;
+    max-width: 80%;
   }
 `
 export const MovieListTitle = styled.h1`
@@ -138,11 +143,11 @@ export const MovieListTitle = styled.h1`
   text-align: left;
   height: 42px;
   width: 197px;
-  left: 165px;
-  top: 637px;
+
   margin: 0;
   margin-top: 40px;
   margin-bottom: 20px;
+
   @media screen and (max-width: 360px) {
     font-family: HK Grotesk;
     font-size: 20px;
@@ -175,4 +180,11 @@ export const ContactText = styled.p`
   height: 28px;
   width: 80px;
   color: #ffffff;
+  @media screen and (max-width: 360px) {
+    font-size: 14px;
+
+    line-height: 20px;
+    height: 20px;
+    width: 70px;
+  }
 `

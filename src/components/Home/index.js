@@ -1,6 +1,8 @@
 import {Component} from 'react'
+
 import {FaYoutube, FaTwitter, FaInstagram} from 'react-icons/fa'
 import {AiOutlineGoogle} from 'react-icons/ai'
+import Header from '../Header'
 import MovieSlider from '../MovieSlider'
 
 import {
@@ -73,36 +75,39 @@ class Home extends Component {
     const {banner} = this.state
     const {name, backgroundImageUrl, overview} = banner
     return (
-      <HomeContainer>
-        <Banner backgroundImageUrl={backgroundImageUrl}>
-          <ContentContainer>
-            <BannerTitle>{name}</BannerTitle>
-            <OverView>{overview}</OverView>
-            <PlayButton>Play</PlayButton>
-          </ContentContainer>
+      <>
+        <Header />
+        <HomeContainer>
+          <Banner backgroundImageUrl={backgroundImageUrl}>
+            <ContentContainer>
+              <BannerTitle>{name}</BannerTitle>
+              <OverView>{overview}</OverView>
+              <PlayButton>Play</PlayButton>
+            </ContentContainer>
 
-          <FadeBottom>{null}</FadeBottom>
-        </Banner>
-        <MovieContainer>
-          <MovieListContainer>
-            <MovieListTitle>Trending Now</MovieListTitle>
-            <MovieSlider fetchUrl={trendingUrl} />
-            <MovieListTitle>Top Rated</MovieListTitle>
-            <MovieSlider fetchUrl={topRatedUrl} />
-            <MovieListTitle>Originals</MovieListTitle>
-            <MovieSlider fetchUrl={originalsUrl} />
-          </MovieListContainer>
-          <ContactContainer>
-            <ContactIcons>
-              <AiOutlineGoogle className="icon" />
-              <FaTwitter className="icon" />
-              <FaInstagram className="icon" />
-              <FaYoutube className="icon" />
-            </ContactIcons>
-            <ContactText>Contact Us</ContactText>
-          </ContactContainer>
-        </MovieContainer>
-      </HomeContainer>
+            <FadeBottom>{null}</FadeBottom>
+          </Banner>
+          <MovieContainer>
+            <MovieListContainer>
+              <MovieListTitle>Trending Now</MovieListTitle>
+              <MovieSlider fetchUrl={trendingUrl} />
+              <MovieListTitle>Top Rated</MovieListTitle>
+              <MovieSlider fetchUrl={topRatedUrl} />
+              <MovieListTitle>Originals</MovieListTitle>
+              <MovieSlider fetchUrl={originalsUrl} />
+            </MovieListContainer>
+            <ContactContainer>
+              <ContactIcons>
+                <AiOutlineGoogle className="icon" />
+                <FaTwitter className="icon" />
+                <FaInstagram className="icon" />
+                <FaYoutube className="icon" />
+              </ContactIcons>
+              <ContactText>Contact Us</ContactText>
+            </ContactContainer>
+          </MovieContainer>
+        </HomeContainer>
+      </>
     )
   }
 }
