@@ -9,6 +9,9 @@ export const NavHeader = styled.nav`
   top: 0;
   left: 0;
     width: 100%;
+    background: #131313;
+    opacity: 0.7;
+     z-index: 1;
 
 }
 
@@ -35,10 +38,10 @@ export const NavContent = styled.div`
 export const HeaderContainerLg = styled.div`
   display: flex;
   justify-content: space-around;
-  background: #131313;
+
   height: 103px;
-  z-index: 1;
-  opacity: 0.7;
+
+  width: 100%;
 
   @media screen and (max-width: 360px) {
     display: none;
@@ -86,6 +89,8 @@ export const SearchInputLg = styled.input`
   align-self: center;
   width: 150px;
   height: 38px;
+  color: #fff;
+  font-size: 18px;
   background: #131313;
 `
 export const SearchIconLg = styled(GoSearch)`
