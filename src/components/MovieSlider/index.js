@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Slider from 'react-slick'
 import {Poster} from './styledComponents'
 
@@ -59,15 +60,18 @@ class MoviesSlider extends Component {
       <Slider {...settings}>
         {movieList.map(movie => {
           const movieImage = `https://image.tmdb.org/t/p/original/${movie.poster_path}`
+          const {id} = movie
           return (
-            <div key={movie.id}>
-              <Poster
-                src={movieImage}
-                alt="poster"
-                width="100%"
-                height="100%"
-              />
-            </div>
+            <Link to={`/movies/${id}`}>
+              <div key={id}>
+                <Poster
+                  src={movieImage}
+                  alt="poster"
+                  width="100%"
+                  height="100%"
+                />
+              </div>
+            </Link>
           )
         })}
       </Slider>

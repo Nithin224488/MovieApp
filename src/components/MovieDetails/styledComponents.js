@@ -126,3 +126,61 @@ export const FadeBottom = styled.div`
   top: 443px;
   border-radius: 0px;
 `
+export const MovieDetailsBottom = styled.div`
+  background: #181818;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+export const MovieSpecificDetails = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+`
+export const DetailContainer = styled.div`
+  padding: 5px;
+`
+export const DetailHeading = styled.h1`
+  font-family: HK Grotesk;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0px;
+
+  color: #64748b;
+`
+export const DetailList = styled.ul`
+  list-style-type: none;
+`
+export const Detail = styled.li`
+  color: #ffffff;
+  font-family: HK Grotesk;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+`
+export const SimilarMoviesContainer = styled.div`
+  width: 90%;
+`
+
+export const SimilarMoviesHeading = styled.h1`
+  font-family: HK Grotesk;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ffffff;
+`
+export const SimilarMoviesList = styled.div`
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
