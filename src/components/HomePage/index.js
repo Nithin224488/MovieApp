@@ -48,15 +48,17 @@ class HomePage extends Component {
     const data = await response.json()
     const formattedBannerData = data.results.map(film => ({
       name: film.name,
+      title: film.title,
+      originalName: film.original_name,
       backdropPath: film.backdrop_path,
       overview: film.overview,
     }))
 
-    /* const randomIndex = Math.ceil(
+    const randomIndex = Math.ceil(
       Math.random() * formattedBannerData.length - 1,
-    ) */
+    )
 
-    const bannerData = formattedBannerData[0]
+    const bannerData = formattedBannerData[randomIndex]
 
     const backgroundImageUrlResponse = await fetch(
       `${imageBaseUrl + bannerData.backdropPath}`,
@@ -70,16 +72,24 @@ class HomePage extends Component {
     this.setState({banner})
   }
 
+  spliceString = overview => {
+    if (overview.length > 250) {
+      return overview.slice(0, 251).concat('...')
+    }
+    return overview
+  }
+
   render() {
     const {banner} = this.state
-    const {name, backgroundImageUrl, overview} = banner
+    const {name, title, originalName, backgroundImageUrl, overview} = banner
+
     return (
       <>
         <HomeContainer>
           <Banner backgroundImageUrl={backgroundImageUrl}>
             <ContentContainer>
-              <BannerTitle>{name}</BannerTitle>
-              <OverView>{overview}</OverView>
+              <BannerTitle>{title || name || originalName}</BannerTitle>
+              <OverView>{overview && this.spliceString(overview)}</OverView>
               <PlayButton>Play</PlayButton>
             </ContentContainer>
 

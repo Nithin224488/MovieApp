@@ -8,10 +8,26 @@ import Popular from './components/Popular'
 import SearchContext from './context/SearchContext'
 import './App.css'
 
+const apiStatusConstants = {
+  initial: 'INITIAL',
+  success: 'SUCCESS',
+  failure: 'FAILURE',
+  inProgress: 'IN_PROGRESS',
+}
+
 class App extends Component {
-  state = {searchInput: 'a', searchList: [], currentPage: '1', pageCount: 10}
+  state = {
+    searchInput: 'a',
+    searchList: [],
+    currentPage: '1',
+    pageCount: 10,
+    apiStatus: apiStatusConstants.initial,
+  }
 
   getSearchList = async () => {
+    this.setState({
+      apiStatus: apiStatusConstants.inProgress,
+    })
     let {searchInput} = this.state
     const {currentPage} = this.state
     if (searchInput === '') {
@@ -22,7 +38,15 @@ class App extends Component {
     const response = await fetch(url)
     const data = await response.json()
 
-    this.setState({searchList: data.results, pageCount: data.total_pages})
+    if (data.results.length !== 0) {
+      this.setState({
+        searchList: data.results,
+        pageCount: data.total_pages,
+        apiStatus: apiStatusConstants.success,
+      })
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
+    }
   }
 
   updateSearchInput = value => {
@@ -33,8 +57,12 @@ class App extends Component {
     this.setState({currentPage: pageNo}, this.getSearchList)
   }
 
+  search = () => {
+    this.getSearchList()
+  }
+
   render() {
-    const {searchInput, searchList, pageCount} = this.state
+    const {searchInput, searchList, pageCount, apiStatus} = this.state
     return (
       <BrowserRouter>
         <SearchContext.Provider
@@ -44,6 +72,8 @@ class App extends Component {
             updateSearchInput: this.updateSearchInput,
             setCurrentPage: this.setCurrentPage,
             pageCount,
+            apiStatus,
+            search: this.search,
           }}
         >
           <Switch>

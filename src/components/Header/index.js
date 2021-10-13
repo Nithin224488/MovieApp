@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Link} from 'react-router-dom'
+
 import SearchContext from '../../context/SearchContext'
 import {
   NavHeader,
@@ -22,6 +22,8 @@ import {
   NavItemsContainerSm,
   NavItemSm,
   CloseIcon,
+  NavLink,
+  HeaderBackground,
 } from './styledComponents'
 
 class Header extends Component {
@@ -32,8 +34,19 @@ class Header extends Component {
 
   onClickSearchIcon = () => {
     const {setSearchPage} = this.props
-    setSearchPage()
+    if (setSearchPage !== undefined) {
+      setSearchPage(true)
+    }
+
     this.setState({isSearch: true})
+  }
+
+  onClickHome = () => {
+    const {setSearchPage} = this.props
+    if (setSearchPage !== undefined) {
+      setSearchPage(false)
+    }
+    this.setState({isSearch: false})
   }
 
   onClickClose = () => {
@@ -46,87 +59,112 @@ class Header extends Component {
 
   render() {
     const {isSearch, isNavItemsShow} = this.state
+    const {setSearchPage} = this.props
 
     return (
       <SearchContext.Consumer>
         {value => {
-          const {updateSearchInput} = value
+          const {updateSearchInput, search} = value
 
           const onChangeSearch = event => {
-            updateSearchInput(event.target.value)
+            if (event.key === 'Enter') {
+              updateSearchInput(event.target.value)
+            }
+          }
+
+          const onClickSearchIcon = () => {
+            if (setSearchPage !== undefined) {
+              setSearchPage(true)
+            }
+
+            this.setState({isSearch: true})
+            search()
           }
 
           return (
-            <NavHeader>
-              <NavContent>
-                <HeaderContainerLg>
-                  <NavItemContainer>
-                    <Link to="/">
-                      <LogoLg
+            <>
+              <HeaderBackground>{null}</HeaderBackground>
+              <NavHeader>
+                <NavContent>
+                  <HeaderContainerLg>
+                    <NavItemContainer>
+                      <NavLink to="/">
+                        <LogoLg
+                          src="https://res.cloudinary.com/dsepzpw0f/image/upload/v1633768656/Group_7399_wca4yy.svg"
+                          alt="logo"
+                          onClick={this.onClickHome}
+                        />
+                      </NavLink>
+                      <NavLink to="/">
+                        <NavItem onClick={this.onClickHome}>Home</NavItem>
+                      </NavLink>
+                      <NavLink to="/popular">
+                        <NavItem>Popular</NavItem>
+                      </NavLink>
+                    </NavItemContainer>
+                    <AccountContainer>
+                      {isSearch ? (
+                        <SearchContainerLg>
+                          <SearchInputLg
+                            type="search"
+                            onKeyDown={onChangeSearch}
+                          />
+                          <SearchIconLg />
+                        </SearchContainerLg>
+                      ) : (
+                        <SearchIconLg onClick={onClickSearchIcon} />
+                      )}
+                      <Avatar
+                        src="https://res.cloudinary.com/dsepzpw0f/image/upload/v1633865407/Avatar_cbvxo7.svg"
+                        alt="avatar"
+                      />
+                    </AccountContainer>
+                  </HeaderContainerLg>
+
+                  <HeaderContainerSm>
+                    <NavLink to="/">
+                      <LogoSm
                         src="https://res.cloudinary.com/dsepzpw0f/image/upload/v1633768656/Group_7399_wca4yy.svg"
                         alt="logo"
+                        onClick={this.onClickHome}
                       />
-                    </Link>
-                    <Link to="/">
-                      <NavItem>Home</NavItem>
-                    </Link>
-                    <Link to="/popular">
-                      <NavItem>Popular</NavItem>
-                    </Link>
-                  </NavItemContainer>
-                  <AccountContainer>
-                    {isSearch ? (
-                      <SearchContainerLg>
-                        <SearchInputLg
-                          type="search"
-                          onChange={onChangeSearch}
-                        />
-                        <SearchIconLg />
-                      </SearchContainerLg>
-                    ) : (
-                      <SearchIconLg onClick={this.onClickSearchIcon} />
-                    )}
-                    <Avatar
-                      src="https://res.cloudinary.com/dsepzpw0f/image/upload/v1633865407/Avatar_cbvxo7.svg"
-                      alt="avatar"
-                    />
-                  </AccountContainer>
-                </HeaderContainerLg>
-
-                <HeaderContainerSm>
-                  <LogoSm
-                    src="https://res.cloudinary.com/dsepzpw0f/image/upload/v1633768656/Group_7399_wca4yy.svg"
-                    alt="logo"
-                  />
-                  <AccountContainer>
-                    {isSearch ? (
-                      <SearchContainerSm>
-                        <SearchInputSm
-                          type="search"
-                          onChange={onChangeSearch}
-                        />
-                        <SearchIconSm />
-                      </SearchContainerSm>
-                    ) : (
-                      <SearchIconSm onClick={this.onClickSearchIcon} />
-                    )}
-                    <NavIcon
-                      src="https://res.cloudinary.com/dsepzpw0f/image/upload/v1633867523/add-to-queue_1_teisp3.svg"
-                      alt="nav-icon"
-                      onClick={this.onClickShowNavItem}
-                    />
-                  </AccountContainer>
-                </HeaderContainerSm>
-                {isNavItemsShow && (
-                  <NavItemsContainerSm>
-                    <NavItemSm>Home</NavItemSm>
-                    <NavItemSm>Popular</NavItemSm>
-                    <NavItemSm>Account</NavItemSm>
-                    <CloseIcon onClick={this.onClickClose} />
-                  </NavItemsContainerSm>
-                )}
-              </NavContent>
-            </NavHeader>
+                    </NavLink>
+                    <AccountContainer>
+                      {isSearch ? (
+                        <SearchContainerSm>
+                          <SearchInputSm
+                            type="search"
+                            onKeyDown={onChangeSearch}
+                          />
+                          <SearchIconSm />
+                        </SearchContainerSm>
+                      ) : (
+                        <SearchIconSm onClick={onClickSearchIcon} />
+                      )}
+                      <NavIcon
+                        src="https://res.cloudinary.com/dsepzpw0f/image/upload/v1633867523/add-to-queue_1_teisp3.svg"
+                        alt="nav-icon"
+                        onClick={this.onClickShowNavItem}
+                      />
+                    </AccountContainer>
+                  </HeaderContainerSm>
+                  {isNavItemsShow && (
+                    <NavItemsContainerSm>
+                      <NavLink to="/">
+                        <NavItemSm onClick={this.onClickHome}>Home</NavItemSm>
+                      </NavLink>
+                      <NavLink to="/popular">
+                        <NavItemSm>Popular</NavItemSm>
+                      </NavLink>
+                      <NavLink>
+                        <NavItemSm>Account</NavItemSm>
+                      </NavLink>
+                      <CloseIcon onClick={this.onClickClose} />
+                    </NavItemsContainerSm>
+                  )}
+                </NavContent>
+              </NavHeader>
+            </>
           )
         }}
       </SearchContext.Consumer>

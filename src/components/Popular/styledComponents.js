@@ -14,4 +14,17 @@ export const PopularList = styled.ul`
   list-style-type: none;
   padding-top: 100px;
   width: 90%;
+  max-width: 1140px;
+  z-index: 20px;
+  align-self: center;
+  padding-left: 0;
+  @media screen and (max-width: 360px) {
+    width: 90%;
+  }
+`
+export const LoaderSpinnerContainer = styled.div`
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `

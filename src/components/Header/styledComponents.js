@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 import {GoSearch} from 'react-icons/go'
 import {AiFillCloseCircle} from 'react-icons/ai'
 
@@ -9,11 +10,9 @@ export const NavHeader = styled.nav`
   top: 0;
   left: 0;
     width: 100%;
-    background: #131313;
-    opacity: 0.7;
-     z-index: 1;
-
+   background:transparent;
 }
+
 
 @media screen and (max-width: 360px) {
 
@@ -23,12 +22,27 @@ export const NavHeader = styled.nav`
   }
 
 `
+
+export const HeaderBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #131313;
+  opacity: 0.2;
+  height: 103px;
+  z-index: 15;
+  @media screen and (max-width: 360px) {
+    height: 75px;
+  }
+`
 export const NavContent = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
   width: 90%;
   max-width: 1110px;
+  z-index: 100;
 
   @media screen and (max-width: 360px) {
     flex-direction: column;
@@ -37,7 +51,7 @@ export const NavContent = styled.div`
 
 export const HeaderContainerLg = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 
   height: 103px;
 
@@ -83,22 +97,29 @@ export const SearchContainerLg = styled.div`
 `
 export const SearchInputLg = styled.input`
   border-radius: 4px;
-  padding: 8px, 10px, 8px, 8px;
+  padding: 8px 8px 8px 15px;
   border: none;
   outline: none;
   align-self: center;
-  width: 150px;
+  width: 130px;
   height: 38px;
   color: #fff;
-  font-size: 18px;
+
   background: #131313;
+  font-family: HK Grotesk;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
 `
 export const SearchIconLg = styled(GoSearch)`
   align-self: center;
   color: #ffff;
   cursor: pointer;
   height: 24px;
-  width: 24px;
+  width: 44px;
   font-size: 24px;
 `
 export const Avatar = styled.img`
@@ -109,14 +130,11 @@ export const Avatar = styled.img`
 `
 export const HeaderContainerSm = styled.div`
   display: flex;
-  justify-content: space-around;
-  background: #131313;
+  justify-content: space-between;
+
   height: 75px;
-  z-index: 1;
-  opacity: 0.7;
-  position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 15;
+
   width: 100%;
   @media screen and (min-width: 360px) {
     display: none;
@@ -137,7 +155,7 @@ export const SearchContainerSm = styled.div`
 `
 
 export const SearchInputSm = styled.input`
-  padding: 4px, 10px, 4px, 8px;
+  padding: 4px, 4px, 4px, 10px;
   border: none;
   outline: none;
   align-self: center;
@@ -160,6 +178,7 @@ export const NavIcon = styled.img`
   width: 24px;
   align-self: center;
   margin: 20px;
+  margin-right: 0;
 `
 export const NavItemsContainerSm = styled.div`
   display: flex;
@@ -185,4 +204,9 @@ export const CloseIcon = styled(AiFillCloseCircle)`
   color: #ffffff;
   align-self: center;
   cursor: pointer;
+`
+export const NavLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 `

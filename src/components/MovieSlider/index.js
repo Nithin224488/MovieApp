@@ -62,8 +62,8 @@ class MoviesSlider extends Component {
           const movieImage = `https://image.tmdb.org/t/p/original/${movie.poster_path}`
           const {id} = movie
           return (
-            <Link to={`/movies/${id}`}>
-              <div key={id}>
+            <Link to={`/movies/${id}`} key={id}>
+              <div>
                 <Poster
                   src={movieImage}
                   alt="poster"

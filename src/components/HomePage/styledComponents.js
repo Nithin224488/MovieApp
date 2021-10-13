@@ -21,9 +21,12 @@ export const Banner = styled.div`
   }
 `
 export const ContentContainer = styled.div`
-  margin-left: 164px;
+  width: 90%;
+  max-width: 1140px;
+  z-index: 20px;
+  align-self: center;
   @media screen and (max-width: 360px) {
-    margin-left: 32px;
+    width: 90%;
   }
 `
 export const BannerTitle = styled.h1`
@@ -34,8 +37,7 @@ export const BannerTitle = styled.h1`
   line-height: 62px;
   letter-spacing: 0px;
   text-align: left;
-  height: 62px;
-
+  min-height: 62px;
   color: #ffffff;
 
   @media screen and (max-width: 360px) {
@@ -46,7 +48,8 @@ export const BannerTitle = styled.h1`
     line-height: 56px;
     letter-spacing: 0px;
     text-align: left;
-    height: 56px;
+    min-height: 56px;
+    margin-bottom: 15px;
   }
 `
 export const OverView = styled.p`
@@ -58,17 +61,16 @@ export const OverView = styled.p`
   letter-spacing: 0em;
   text-align: left;
   color: #ffffff;
-  height: 78px;
+  min-height: 78px;
   width: 443px;
-  left: 164px;
-  top: 285px;
+
   @media screen and (max-width: 360px) {
     font-family: HK Grotesk;
     font-size: 16px;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
-    height: 63px;
+    min-height: 63px;
     width: 296px;
   }
 `
@@ -111,6 +113,9 @@ export const FadeBottom = styled.div`
   left: 0px;
   top: 443px;
   border-radius: 0px;
+  @media screen and (max-width: 360px) {
+    top: 320px;
+  }
 `
 export const MovieContainer = styled.div`
   background: #131313;
@@ -118,15 +123,15 @@ export const MovieContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 165px;
-  padding-left: 165px;
+
   @media screen and (max-width: 360px) {
     padding-right: 0px;
     padding-left: 0px;
   }
 `
 export const MovieListContainer = styled.div`
-  width: 100%;
+  width: 90%;
+  max-width: 1140px;
   z-index: 100;
   @media screen and (max-width: 360px) {
     max-width: 80%;
@@ -182,7 +187,6 @@ export const ContactText = styled.p`
   color: #ffffff;
   @media screen and (max-width: 360px) {
     font-size: 14px;
-
     line-height: 20px;
     height: 20px;
     width: 70px;

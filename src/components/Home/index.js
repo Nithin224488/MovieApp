@@ -6,8 +6,8 @@ import Header from '../Header'
 class Home extends Component {
   state = {isSearch: false}
 
-  setSearchPage = () => {
-    this.setState({isSearch: true})
+  setSearchPage = value => {
+    this.setState({isSearch: value})
   }
 
   render() {
