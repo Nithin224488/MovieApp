@@ -1,11 +1,12 @@
 import {Component} from 'react'
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 
 import LoginForm from './components/LoginForm'
 import Home from './components/Home'
 import MovieDetails from './components/MovieDetails'
 import Popular from './components/Popular'
 import SearchContext from './context/SearchContext'
+import NotFound from './components/NotFound'
 import './App.css'
 
 const apiStatusConstants = {
@@ -19,8 +20,8 @@ class App extends Component {
   state = {
     searchInput: 'a',
     searchList: [],
-    currentPage: '1',
-    pageCount: 10,
+    currentPage: 1,
+    totalPages: 10,
     apiStatus: apiStatusConstants.initial,
   }
 
@@ -41,7 +42,7 @@ class App extends Component {
     if (data.results.length !== 0) {
       this.setState({
         searchList: data.results,
-        pageCount: data.total_pages,
+        totalPages: data.total_pages,
         apiStatus: apiStatusConstants.success,
       })
     } else {
@@ -62,7 +63,13 @@ class App extends Component {
   }
 
   render() {
-    const {searchInput, searchList, pageCount, apiStatus} = this.state
+    const {
+      searchInput,
+      searchList,
+      currentPage,
+      totalPages,
+      apiStatus,
+    } = this.state
     return (
       <BrowserRouter>
         <SearchContext.Provider
@@ -71,7 +78,8 @@ class App extends Component {
             searchList,
             updateSearchInput: this.updateSearchInput,
             setCurrentPage: this.setCurrentPage,
-            pageCount,
+            currentPage,
+            totalPages,
             apiStatus,
             search: this.search,
           }}
@@ -81,6 +89,8 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/movies/:id" component={MovieDetails} />
             <Route exact path="/popular" component={Popular} />
+            <Route path="/not-found" component={NotFound} />
+            <Redirect to="not-found" />
           </Switch>
         </SearchContext.Provider>
       </BrowserRouter>

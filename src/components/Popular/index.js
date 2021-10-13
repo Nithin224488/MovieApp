@@ -1,9 +1,8 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
-import ReactPaginate from 'react-paginate'
+import Pagination from '../Pagination'
 import MovieItem from '../MovieItem'
 import Header from '../Header'
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
 import {
   PopularContainer,
@@ -45,11 +44,8 @@ class Popular extends Component {
     })
   }
 
-  handlePageChange = selectedObject => {
-    this.setState(
-      {currentPage: selectedObject.selected},
-      this.getPopularMovieList,
-    )
+  handlePageChange = currentPage => {
+    this.setState({currentPage}, this.getPopularMovieList)
   }
 
   renderLoadingView = () => (
@@ -59,7 +55,7 @@ class Popular extends Component {
   )
 
   renderPopularFilms = () => {
-    const {popularMoviesList} = this.state
+    const {popularMoviesList, currentPage} = this.state
 
     return (
       <>
@@ -75,18 +71,10 @@ class Popular extends Component {
               />
             ))}
         </PopularList>
-        <ReactPaginate
-          pageCount={popularMoviesList.total_pages}
-          pageRange={10}
-          marginPagesDisplayed={2}
-          onPageChange={this.handlePageChange}
-          containerClassName="container"
-          previousLinkClassName="page"
-          breakClassName="page"
-          nextLinkClassName="page"
-          pageClassName="page"
-          disabledClassNae="disabled"
-          activeClassName="active"
+        <Pagination
+          handlePageChange={this.handlePageChange}
+          totalPages={popularMoviesList.total_pages}
+          currentPage={currentPage}
         />
       </>
     )

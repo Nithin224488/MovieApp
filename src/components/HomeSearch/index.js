@@ -1,6 +1,7 @@
 import {Component} from 'react'
-import ReactPaginate from 'react-paginate'
 import Loader from 'react-loader-spinner'
+import Pagination from '../Pagination'
+
 import {
   SearchContainer,
   SearchList,
@@ -30,11 +31,12 @@ class HomeSearch extends Component {
             searchInput,
             searchList,
             setCurrentPage,
-            pageCount,
+            currentPage,
+            totalPages,
             apiStatus,
           } = value
-          const handlePageChange = selectedObject => {
-            setCurrentPage(selectedObject.selected)
+          const handlePageChange = updatedPageNo => {
+            setCurrentPage(updatedPageNo)
           }
 
           const renderLoadingView = () => (
@@ -66,18 +68,10 @@ class HomeSearch extends Component {
                   />
                 ))}
               </SearchList>
-              <ReactPaginate
-                pageCount={pageCount}
-                pageRange={10}
-                marginPagesDisplayed={2}
-                onPageChange={handlePageChange}
-                containerClassName="container"
-                previousLinkClassName="page"
-                breakClassName="page"
-                nextLinkClassName="page"
-                pageClassName="page"
-                disabledClassNae="disabled"
-                activeClassName="active"
+              <Pagination
+                handlePageChange={handlePageChange}
+                totalPages={totalPages}
+                currentPage={currentPage}
               />
             </>
           )

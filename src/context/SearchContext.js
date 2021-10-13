@@ -5,7 +5,8 @@ const SearchContext = React.createContext({
   searchList: [],
   updateSearchInput: () => {},
   setCurrentPage: () => {},
-  pageCount: 10,
+  currentPage: 1,
+  totalPages: 10,
   apiStatus: null,
   search: () => {},
 })

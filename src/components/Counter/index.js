@@ -19,3 +19,17 @@ class Counter extends Component {
 }
 
 export default Counter
+
+ <ReactPaginate
+          pageCount={popularMoviesList.total_pages}
+          pageRange={10}
+          marginPagesDisplayed={2}
+          onPageChange={this.handlePageChange}
+          containerClassName="container"
+          previousLinkClassName="page"
+          breakClassName="page"
+          nextLinkClassName="page"
+          pageClassName="page"
+          disabledClassNae="disabled"
+          activeClassName="active"
+        />
