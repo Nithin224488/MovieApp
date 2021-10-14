@@ -10,7 +10,7 @@ export const NotFoundContainer = styled.div`
   background-size: cover;
 `
 export const NotFoundHeading = styled.h1`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 96px;
   font-style: normal;
   font-weight: 700;
@@ -20,16 +20,15 @@ export const NotFoundHeading = styled.h1`
   color: #ffffff;
   @media screen and (max-width: 360px) {
     font-size: 40px;
-
     line-height: 52px;
     letter-spacing: 0px;
   }
 `
 export const NotFoundDescription = styled.p`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 24px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 31px;
   letter-spacing: 0em;
   text-align: center;
@@ -64,10 +63,10 @@ export const ErrorContainer = styled.div`
   color: #ffffff;
 `
 export const ErrorCode = styled.p`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 32px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 42px;
   letter-spacing: 0em;
   text-align: center;
@@ -77,7 +76,7 @@ export const ErrorCode = styled.p`
   }
 `
 export const Error = styled.p`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 32px;
   font-style: normal;
   font-weight: 700;

@@ -29,10 +29,10 @@ export const HeaderBackground = styled.div`
   left: 0;
   width: 100%;
   background: #131313;
-  opacity: 0.2;
+  opacity: ${props => (props.isBackgroundDark ? '1' : '0.2')};
   height: 103px;
   z-index: 15;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 430px) {
     height: 75px;
   }
 `
@@ -44,7 +44,7 @@ export const NavContent = styled.div`
   max-width: 1110px;
   z-index: 100;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 430px) {
     flex-direction: column;
   }
 `
@@ -57,7 +57,7 @@ export const HeaderContainerLg = styled.div`
 
   width: 100%;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 430px) {
     display: none;
   }
 `
@@ -71,10 +71,10 @@ export const LogoLg = styled.img`
   align-self: center;
 `
 export const NavItem = styled.h1`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 26px;
   letter-spacing: -0.35555556416511536px;
   text-align: left;
@@ -83,6 +83,9 @@ export const NavItem = styled.h1`
   color: #ffff;
   align-self: center;
   align-items: center;
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 export const AccountContainer = styled.div`
   display: flex;
@@ -106,10 +109,10 @@ export const SearchInputLg = styled.input`
   color: #fff;
 
   background: #131313;
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
@@ -136,7 +139,7 @@ export const HeaderContainerSm = styled.div`
   z-index: 15;
 
   width: 100%;
-  @media screen and (min-width: 360px) {
+  @media screen and (min-width: 431px) {
     display: none;
   }
 `
@@ -192,13 +195,16 @@ export const NavItemsContainerSm = styled.div`
 export const NavItemSm = styled.p`
   color: #ffffff;
 
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 26px;
-  letter-spacing: -0.35555556416511536px;
+  letter-spacing: -0.35px;
   text-align: left;
+  &:hover {
+    transform: scale(1.1);
+  }
 `
 export const CloseIcon = styled(AiFillCloseCircle)`
   color: #ffffff;

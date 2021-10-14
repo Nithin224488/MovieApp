@@ -27,10 +27,10 @@ export const MovieDetailsContent = styled.div`
   }
 `
 export const MovieName = styled.h1`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 64px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 62px;
   letter-spacing: 0px;
   text-align: left;
@@ -38,9 +38,8 @@ export const MovieName = styled.h1`
   color: #ffffff;
 
   @media screen and (max-width: 360px) {
-    font-family: Roboto;
+    font-family: 'HK Grotesk';
     font-size: 48px;
-    font-weight: 500;
     line-height: 56px;
     min-height: 56px;
   }
@@ -51,10 +50,10 @@ export const MovieType = styled.div`
   justify-content: space-between;
 `
 export const RunTime = styled.p`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 23px;
   letter-spacing: 0px;
   text-align: left;
@@ -75,10 +74,10 @@ export const CensorContainer = styled.div`
   align-self: center;
 `
 export const CensorRating = styled.p`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 23px;
   letter-spacing: 0px;
   text-align: left;
@@ -91,10 +90,10 @@ export const CensorRating = styled.p`
   }
 `
 export const Year = styled.p`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 23px;
   letter-spacing: 0px;
   text-align: left;
@@ -105,26 +104,25 @@ export const Year = styled.p`
   }
 `
 export const MovieDescription = styled.p`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 20px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 26px;
   letter-spacing: 0px;
   text-align: left;
   min-height: 78px;
-  width: 632px;
+  max-width: 632px;
+  overflow: none;
   color: #fff;
   @media screen and (max-width: 360px) {
-    font-family: HK Grotesk;
     font-size: 16px;
     font-style: normal;
-    font-weight: 500;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
     min-height: 63px;
-    width: 296px;
+    max-width: 296px;
   }
 `
 export const PlayButton = styled.button`
@@ -191,10 +189,10 @@ export const DetailContainer = styled.div`
   }
 `
 export const DetailHeading = styled.h1`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 26px;
   letter-spacing: 0px;
   color: #64748b;
@@ -212,10 +210,10 @@ export const DetailList = styled.ul`
 `
 export const DetailItem = styled.li`
   color: #ffffff;
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0px;
   text-align: left;
@@ -230,10 +228,10 @@ export const DetailItem = styled.li`
 `
 export const Detail = styled.p`
   color: #ffffff;
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0px;
   text-align: left;
@@ -254,10 +252,10 @@ export const SimilarMoviesContainer = styled.div`
 `
 
 export const SimilarMoviesHeading = styled.h1`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 28px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 36px;
   letter-spacing: 0px;
   text-align: left;
@@ -276,7 +274,6 @@ export const SimilarMoviesList = styled.div`
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 `
 export const LoaderSpinnerContainer = styled.div`
   height: 100vh;

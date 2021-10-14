@@ -5,3 +5,6 @@
   align-self: center;
   cursor: pointer;
 }
+.pagination-arrow :hover {
+  transform: scale(1.03);
+}

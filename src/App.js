@@ -6,7 +6,9 @@ import Home from './components/Home'
 import MovieDetails from './components/MovieDetails'
 import Popular from './components/Popular'
 import SearchContext from './context/SearchContext'
+import Account from './components/Account'
 import NotFound from './components/NotFound'
+import ProtectedRoute from './components/ProtectedRoute'
 import './App.css'
 
 const apiStatusConstants = {
@@ -38,6 +40,7 @@ class App extends Component {
 
     const response = await fetch(url)
     const data = await response.json()
+    console.log(data)
 
     if (data.results.length !== 0) {
       this.setState({
@@ -86,9 +89,10 @@ class App extends Component {
         >
           <Switch>
             <Route exact path="/login" component={LoginForm} />
-            <Route exact path="/" component={Home} />
-            <Route exact path="/movies/:id" component={MovieDetails} />
-            <Route exact path="/popular" component={Popular} />
+            <ProtectedRoute exact path="/" component={Home} />
+            <ProtectedRoute exact path="/movies/:id" component={MovieDetails} />
+            <ProtectedRoute exact path="/popular" component={Popular} />
+            <ProtectedRoute exact path="/account" component={Account} />
             <Route path="/not-found" component={NotFound} />
             <Redirect to="not-found" />
           </Switch>

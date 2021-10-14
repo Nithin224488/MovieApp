@@ -74,6 +74,7 @@ class MovieDetails extends Component {
       votingCount: movieDetailsData.voting_count,
       votingAverage: movieDetailsData.voting_average,
     }
+
     this.setState({movieDetails: formattedMovieDetailsData})
     const similarMoviesResponse = await fetch(
       `https://api.themoviedb.org/3/movie/${id}/similar?api_key=77b8f4b9c7d3ecf6b9f0b992120c1dae&language=en-US&page=1'`,

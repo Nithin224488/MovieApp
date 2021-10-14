@@ -13,8 +13,6 @@ import {
 import SearchContext from '../../context/SearchContext'
 import MovieItem from '../MovieItem'
 
-import './index.css'
-
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',

@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-import('typeface-hk-grotesk')
-
 export const LoginFormContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -62,10 +60,10 @@ export const FormContainer = styled.form`
   }
 `
 export const Heading = styled.h1`
-  font-family: 'typeface-hk-grotesk';
+  font-family: 'HK Grotesk';
   font-size: 32px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 40px;
   letter-spacing: 0em;
   text-align: center;
@@ -96,7 +94,7 @@ export const InputContainer = styled.div`
 `
 export const InputLabel = styled.label`
   margin-bottom: 0px;
-  font-family: 'Roboto';
+  font-family: 'HK Grotesk';
 
   font-size: 12px;
   line-height: 16px;
@@ -116,7 +114,7 @@ export const UserNameInputField = styled.input`
   font-family: 'HK Grotesk';
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
@@ -133,10 +131,10 @@ export const PasswordInputField = styled.input`
   height: 40px;
   background: #333333;
 
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
 
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
@@ -150,7 +148,7 @@ export const PasswordInputField = styled.input`
   outline: none;
 `
 export const LoginButton = styled.button`
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -192,10 +190,10 @@ export const ErrorMessage = styled.p`
   align-self: flex-start;
   font-size: 12px;
   color: #fb923c;
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 14px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 18px;
   letter-spacing: 0em;
   text-align: left;

@@ -5,6 +5,7 @@ export const HomeContainer = styled.div`
   position: relative;
   top: 0;
   left: 0;
+  font-family: 'Roboto';
 `
 export const Banner = styled.div`
   background-image: url(${props =>
@@ -30,10 +31,10 @@ export const ContentContainer = styled.div`
   }
 `
 export const BannerTitle = styled.h1`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 64px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 62px;
   letter-spacing: 0px;
   text-align: left;
@@ -41,10 +42,10 @@ export const BannerTitle = styled.h1`
   color: #ffffff;
 
   @media screen and (max-width: 360px) {
-    font-family: Roboto;
+    font-family: 'HK Grotesk';
     font-size: 48px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 56px;
     letter-spacing: 0px;
     text-align: left;
@@ -53,25 +54,26 @@ export const BannerTitle = styled.h1`
   }
 `
 export const OverView = styled.p`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 20px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 26px;
   letter-spacing: 0em;
   text-align: left;
   color: #ffffff;
   min-height: 78px;
-  width: 443px;
+  max-width: 443px;
+  overflow: none;
 
   @media screen and (max-width: 360px) {
-    font-family: HK Grotesk;
+    font-family: 'HK Grotesk';
     font-size: 16px;
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
     min-height: 63px;
-    width: 296px;
+    max-width: 296px;
   }
 `
 export const PlayButton = styled.button`
@@ -173,12 +175,13 @@ export const ContactIcons = styled.div`
   display: flex;
   justify-content: space-between;
   color: #fff;
+  cursor: pointer;
 `
 export const ContactText = styled.p`
-  font-family: HK Grotesk;
+  font-family: 'HK Grotesk';
   font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 28px;
   letter-spacing: 0px;
   text-align: left;

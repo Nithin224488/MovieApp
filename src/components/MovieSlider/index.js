@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Slider from 'react-slick'
-import {Poster} from './styledComponents'
+import {PosterContainer, Poster} from './styledComponents'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -63,14 +63,14 @@ class MoviesSlider extends Component {
           const {id} = movie
           return (
             <Link to={`/movies/${id}`} key={id}>
-              <div>
+              <PosterContainer>
                 <Poster
                   src={movieImage}
                   alt="poster"
                   width="100%"
                   height="100%"
                 />
-              </div>
+              </PosterContainer>
             </Link>
           )
         })}

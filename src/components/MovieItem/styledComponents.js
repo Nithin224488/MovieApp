@@ -4,6 +4,9 @@ export const MovieCardItem = styled.li`
   height: 170px;
   width: 255px;
   margin-bottom: 20px;
+  &:hover {
+    transform: scale(1.1);
+  }
   @media screen and (max-width: 360px) {
     height: 100px;
     width: 90px;

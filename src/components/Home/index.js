@@ -15,7 +15,7 @@ class Home extends Component {
 
     return (
       <>
-        <Header setSearchPage={this.setSearchPage} />
+        <Header setSearchPage={this.setSearchPage} isClickSearch />
         {isSearch ? <HomeSearch /> : <HomePage />}
       </>
     )

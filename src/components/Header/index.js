@@ -59,7 +59,7 @@ class Header extends Component {
 
   render() {
     const {isSearch, isNavItemsShow} = this.state
-    const {setSearchPage} = this.props
+    const {setSearchPage, isClickSearch, isBackgroundDark} = this.props
 
     return (
       <SearchContext.Consumer>
@@ -83,7 +83,9 @@ class Header extends Component {
 
           return (
             <>
-              <HeaderBackground>{null}</HeaderBackground>
+              <HeaderBackground isBackgroundDark={isBackgroundDark}>
+                {null}
+              </HeaderBackground>
               <NavHeader>
                 <NavContent>
                   <HeaderContainerLg>
@@ -103,7 +105,7 @@ class Header extends Component {
                       </NavLink>
                     </NavItemContainer>
                     <AccountContainer>
-                      {isSearch ? (
+                      {isSearch && isClickSearch ? (
                         <SearchContainerLg>
                           <SearchInputLg
                             type="search"
@@ -114,10 +116,12 @@ class Header extends Component {
                       ) : (
                         <SearchIconLg onClick={onClickSearchIcon} />
                       )}
-                      <Avatar
-                        src="https://res.cloudinary.com/dsepzpw0f/image/upload/v1633865407/Avatar_cbvxo7.svg"
-                        alt="avatar"
-                      />
+                      <NavLink to="/account">
+                        <Avatar
+                          src="https://res.cloudinary.com/dsepzpw0f/image/upload/v1633865407/Avatar_cbvxo7.svg"
+                          alt="avatar"
+                        />
+                      </NavLink>
                     </AccountContainer>
                   </HeaderContainerLg>
 
@@ -130,7 +134,7 @@ class Header extends Component {
                       />
                     </NavLink>
                     <AccountContainer>
-                      {isSearch ? (
+                      {isSearch && isClickSearch ? (
                         <SearchContainerSm>
                           <SearchInputSm
                             type="search"
@@ -156,7 +160,7 @@ class Header extends Component {
                       <NavLink to="/popular">
                         <NavItemSm>Popular</NavItemSm>
                       </NavLink>
-                      <NavLink>
+                      <NavLink to="/account">
                         <NavItemSm>Account</NavItemSm>
                       </NavLink>
                       <CloseIcon onClick={this.onClickClose} />
