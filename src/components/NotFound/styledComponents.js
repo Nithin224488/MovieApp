@@ -18,7 +18,7 @@ export const NotFoundHeading = styled.h1`
   letter-spacing: 0px;
   text-align: left;
   color: #ffffff;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 40px;
     line-height: 52px;
     letter-spacing: 0px;
@@ -33,7 +33,7 @@ export const NotFoundDescription = styled.p`
   letter-spacing: 0em;
   text-align: center;
   color: #ffffff;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 16px;
     line-height: 21px;
   }
@@ -41,9 +41,7 @@ export const NotFoundDescription = styled.p`
 export const HomeButton = styled.button`
   height: 48px;
   width: 135px;
-
   border-radius: 3px;
-
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
@@ -70,7 +68,7 @@ export const ErrorCode = styled.p`
   line-height: 42px;
   letter-spacing: 0em;
   text-align: center;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 20px;
     line-height: 26px;
   }
@@ -84,7 +82,7 @@ export const Error = styled.p`
   letter-spacing: 0em;
   text-align: center;
   margin-left: 20px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 20px;
     line-height: 26px;
   }

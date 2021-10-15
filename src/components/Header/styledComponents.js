@@ -14,7 +14,7 @@ export const NavHeader = styled.nav`
 }
 
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 576px) {
 
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@ export const HeaderBackground = styled.div`
   opacity: ${props => (props.isBackgroundDark ? '1' : '0.2')};
   height: 103px;
   z-index: 15;
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 576px) {
     height: 75px;
   }
 `
@@ -44,7 +44,7 @@ export const NavContent = styled.div`
   max-width: 1110px;
   z-index: 100;
 
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 576px) {
     flex-direction: column;
   }
 `
@@ -57,7 +57,7 @@ export const HeaderContainerLg = styled.div`
 
   width: 100%;
 
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 576px) {
     display: none;
   }
 `
@@ -76,7 +76,7 @@ export const NavItem = styled.h1`
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
-  letter-spacing: -0.35555556416511536px;
+  letter-spacing: -0.35px;
   text-align: left;
   height: 26px;
   margin-left: 30px;
@@ -139,7 +139,7 @@ export const HeaderContainerSm = styled.div`
   z-index: 15;
 
   width: 100%;
-  @media screen and (min-width: 431px) {
+  @media screen and (min-width: 577px) {
     display: none;
   }
 `

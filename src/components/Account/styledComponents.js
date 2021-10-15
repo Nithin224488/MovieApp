@@ -20,7 +20,7 @@ export const Heading = styled.h1`
   line-height: 42px;
   letter-spacing: 0px;
   text-align: left;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 24px;
     line-height: 28px;
   }
@@ -44,7 +44,7 @@ export const AccountHeading = styled.h1`
   letter-spacing: 0px;
   text-align: left;
   color: #94a3b8;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 18px;
     line-height: 23px;
   }
@@ -61,7 +61,7 @@ export const AccountDetail = styled.p`
   padding-top: 0;
   margin-top: 16px;
   margin-left: 20px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 16px;
     line-height: 21px;
   }
@@ -76,7 +76,7 @@ export const Password = styled.p`
   text-align: left;
   color: #64748b;
   margin-left: 20px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 16px;
     line-height: 21px;
   }
@@ -101,7 +101,7 @@ export const AccountType = styled.p`
   letter-spacing: 0px;
   text-align: left;
   color: #1e293b;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 14px;
     line-height: 18px;
   }
@@ -117,8 +117,8 @@ export const LogoutButton = styled.button`
   border: none;
   margin-top: 30px;
   cursor: pointer;
-  @media screen and (max-width: 360px) {
-    font-family: Roboto;
+  @media screen and (max-width: 576px) {
+    font-family: 'Roboto';
     font-size: 16px;
     font-style: normal;
     font-weight: 700;

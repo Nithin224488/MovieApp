@@ -5,12 +5,9 @@ export const LoginFormContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   height: 100vh;
-
   margin: auto;
-
   background: #131313;
-
-  @media screen and (min-width: 360px) {
+  @media screen and (min-width: 576px) {
     background-image: linear-gradient(
         116.64deg,
         rgba(0, 0, 0, 0.8) 0.46%,
@@ -29,7 +26,7 @@ export const Logo = styled.img`
   top: 32px;
   border-radius: 0px;
 
-  @media screen and (min-width: 360px) {
+  @media screen and (min-width: 576px) {
     height: 52px;
     width: 180px;
     left: 8.89%;
@@ -46,12 +43,10 @@ export const FormContainer = styled.form`
   width: 90%;
   background: #131313;
 
-  @media screen and (min-width: 360px) {
+  @media screen and (min-width: 576px) {
     flex-shrink: 0;
     padding: 64px 48px;
-
     border-radius: 8px;
-
     height: 440px;
     max-width: 456px;
     background: #0c0b10;
@@ -69,7 +64,7 @@ export const Heading = styled.h1`
   text-align: center;
   color: #ffffff;
   margin-bottom: 20px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     position: relative;
     height: 40px;
     left: 4.45%;
@@ -84,11 +79,10 @@ export const InputContainer = styled.div`
   max-width: 360px;
   width: 90%;
   border-radius: 0px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     height: 64px;
     width: 100%;
     max-width: 296px;
-
     border-radius: 0px;
   }
 `
@@ -130,17 +124,13 @@ export const PasswordInputField = styled.input`
   font-size: 14px;
   height: 40px;
   background: #333333;
-
   font-family: 'HK Grotesk';
-
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-
   color: #7e858e99;
-
   border: 0;
   border-radius: 2px;
   margin-top: 5px;
@@ -158,9 +148,7 @@ export const LoginButton = styled.button`
   color: #ffffff;
   margin-top: 20px;
   margin-bottom: 2px;
-
   background: #e50914;
-
   border: none;
   outline: none;
   cursor: pointer;
@@ -171,7 +159,7 @@ export const LoginButton = styled.button`
   top: 628px;
   border-radius: 4px;
   padding: 8px, 20px, 8px, 20px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     height: 40px;
     width: 100%;
     max-width: 296px;
@@ -198,7 +186,7 @@ export const ErrorMessage = styled.p`
   letter-spacing: 0em;
   text-align: left;
   left: 4.45%;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     line-height: 16px;
     height: 16px;
     width: 255px;

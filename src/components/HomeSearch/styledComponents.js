@@ -19,7 +19,7 @@ export const SearchList = styled.ul`
   align-self: center;
   padding-left: 0;
   min-height: 90vh;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     width: 90%;
   }
 `
@@ -39,7 +39,7 @@ export const FailureContainer = styled.div`
 export const FailureImage = styled.img`
   height: 378px;
   width: 450px;
-  @media screen and (max-height: 360px) {
+  @media screen and (max-height: 576px) {
     height: 176px;
     width: 209px;
   }
@@ -52,9 +52,8 @@ export const FailureText = styled.p`
   line-height: 31px;
   letter-spacing: 0em;
   color: #ffffff;
-  @media screen and (max-height: 360px) {
+  @media screen and (max-height: 576px) {
     font-size: 16px;
-
     line-height: 24px;
   }
 `

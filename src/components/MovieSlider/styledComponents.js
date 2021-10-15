@@ -5,7 +5,7 @@ export const Poster = styled.img`
   width: 254px;
   border-radius: 8px;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     height: 64px;
     width: 90px;
   }

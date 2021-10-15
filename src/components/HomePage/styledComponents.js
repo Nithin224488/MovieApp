@@ -16,7 +16,7 @@ export const Banner = styled.div`
   justify-content: center;
 
   background-size: 100% 100%;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     background-size: cover;
     height: 472px;
   }
@@ -26,7 +26,7 @@ export const ContentContainer = styled.div`
   max-width: 1140px;
   z-index: 20px;
   align-self: center;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     width: 90%;
   }
 `
@@ -41,7 +41,7 @@ export const BannerTitle = styled.h1`
   min-height: 62px;
   color: #ffffff;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-family: 'HK Grotesk';
     font-size: 48px;
     font-style: normal;
@@ -66,7 +66,7 @@ export const OverView = styled.p`
   max-width: 443px;
   overflow: none;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-family: 'HK Grotesk';
     font-size: 16px;
     line-height: 21px;
@@ -93,7 +93,7 @@ export const PlayButton = styled.button`
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     height: 40px;
     width: 74px;
     padding: 12px, 24px, 12px, 24px;
@@ -115,7 +115,7 @@ export const FadeBottom = styled.div`
   left: 0px;
   top: 443px;
   border-radius: 0px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     top: 320px;
   }
 `
@@ -126,7 +126,7 @@ export const MovieContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     padding-right: 0px;
     padding-left: 0px;
   }
@@ -135,7 +135,7 @@ export const MovieListContainer = styled.div`
   width: 90%;
   max-width: 1140px;
   z-index: 100;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     max-width: 80%;
   }
 `
@@ -155,7 +155,7 @@ export const MovieListTitle = styled.h1`
   margin-top: 40px;
   margin-bottom: 20px;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-family: HK Grotesk;
     font-size: 20px;
     margin-top: 20px;
@@ -188,7 +188,7 @@ export const ContactText = styled.p`
   height: 28px;
   width: 80px;
   color: #ffffff;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 14px;
     line-height: 20px;
     height: 20px;

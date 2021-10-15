@@ -18,7 +18,7 @@ export const PopularList = styled.ul`
   z-index: 20px;
   align-self: center;
   padding-left: 0;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     width: 90%;
   }
 `

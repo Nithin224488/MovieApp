@@ -10,9 +10,8 @@ export const MovieBanner = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   background-size: 100% 100%;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     background-size: cover;
     height: 472px;
   }
@@ -22,7 +21,7 @@ export const MovieDetailsContent = styled.div`
   max-width: 1140px;
   z-index: 100px;
   align-self: center;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     width: 90%;
   }
 `
@@ -37,7 +36,7 @@ export const MovieName = styled.h1`
   min-height: 62px;
   color: #ffffff;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-family: 'HK Grotesk';
     font-size: 48px;
     line-height: 56px;
@@ -58,7 +57,7 @@ export const RunTime = styled.p`
   letter-spacing: 0px;
   text-align: left;
   color: #fff;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 16px;
     line-height: 21px;
   }
@@ -84,7 +83,7 @@ export const CensorRating = styled.p`
   color: #fff;
   margin: 0;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 16px;
     line-height: 21px;
   }
@@ -98,7 +97,7 @@ export const Year = styled.p`
   letter-spacing: 0px;
   text-align: left;
   color: #fff;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 16px;
     line-height: 21px;
   }
@@ -115,7 +114,7 @@ export const MovieDescription = styled.p`
   max-width: 632px;
   overflow: none;
   color: #fff;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 16px;
     font-style: normal;
     line-height: 21px;
@@ -142,7 +141,7 @@ export const PlayButton = styled.button`
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     height: 40px;
     width: 74px;
     padding: 12px, 24px, 12px, 24px;
@@ -162,7 +161,7 @@ export const FadeBottom = styled.div`
   width: 100%;
   left: 0px;
   top: 443px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     top: 320px;
   }
 `
@@ -178,13 +177,13 @@ export const MovieSpecificDetails = styled.div`
   justify-content: space-between;
   width: 90%;
   max-width: 1140px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     width: 90%;
     flex-wrap: wrap;
   }
 `
 export const DetailContainer = styled.div`
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     flex-basis: 30%;
   }
 `
@@ -198,7 +197,7 @@ export const DetailHeading = styled.h1`
   color: #64748b;
   height: 26px;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 14px;
     line-height: 18px;
     height: 18px;
@@ -220,7 +219,7 @@ export const DetailItem = styled.li`
   padding-bottom: 5px;
   height: 24px;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 12px;
     line-height: 20px;
     height: 20px;
@@ -237,7 +236,7 @@ export const Detail = styled.p`
   text-align: left;
   padding-bottom: 5px;
   height: 24px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 12px;
     line-height: 20px;
     height: 20px;
@@ -246,7 +245,7 @@ export const Detail = styled.p`
 export const SimilarMoviesContainer = styled.div`
   width: 90%;
   max-width: 1140px;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     width: 90%;
   }
 `
@@ -263,7 +262,7 @@ export const SimilarMoviesHeading = styled.h1`
   height: 36px;
   width: 170px;
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     font-size: 24px;
     line-height: 31px;
     height: 31px;

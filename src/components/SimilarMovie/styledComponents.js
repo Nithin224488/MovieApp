@@ -11,7 +11,7 @@ export const Movie = styled.img`
     transform: scale(1.1);
   }
   cursor: pointer;
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 576px) {
     height: 64px;
     width: 90px;
     margin-top: 15px;
